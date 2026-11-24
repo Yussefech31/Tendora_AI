@@ -1,0 +1,7 @@
+pdfplumber
+openpyxl
+python-docx
+jsonschema
+requests
+python-dotenv
+rapidocr-onnxruntime   # OCR local Windows/Linux (sur Mac : ocrmac)

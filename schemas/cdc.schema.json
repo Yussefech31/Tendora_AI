@@ -1,0 +1,21 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"CDC extraction",
+ "type":"object",
+ "required":["meta","lignes"],
+ "properties":{
+  "meta":{"type":"object","additionalProperties":{"$ref":"#/$defs/f"}},
+  "lignes":{"type":"array","items":{"type":"object","required":["n","designation_fr","qte"],
+    "properties":{"n":{"type":"integer"},"code":{"type":["string","null"]},"designation_fr":{"type":"string"},
+    "designation_en":{"type":["string","null"]},"qte":{"type":"number"},"unite":{"type":["string","null"]},
+    "source":{"$ref":"#/$defs/src"}}}}
+ },
+ "$defs":{
+  "src":{"type":"object","properties":{"page":{"type":"integer"},"quote":{"type":"string"}}},
+  "f":{"type":"object","required":["value","source"],"properties":{
+     "value":{"type":["string","number","null"]},
+     "source":{"$ref":"#/$defs/src"},
+     "confidence":{"enum":["high","medium","low"]},
+     "binding":{"type":"boolean","description":"condition contraignante => validation humaine obligatoire"}}}
+ }
+}

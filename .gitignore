@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.induserv/
+venv/
+.venv/
+env/
+ENV/
+
+# Environment configuration & Secrets
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# CONFIDENTIALITÉ & DONNÉES SENSIBLES
+# ==========================================
+
+# 1. Documents clients en entrée (PDF, RFQ, CDC)
+input/*
+!input/.gitkeep
+*.pdf
+
+# 2. Données et offres générées en sortie
+output/*
+!output/.gitkeep
+
+# 3. Échantillons, exemples et données de test (extractions réelles, métadonnées)
+samples/
+samples/*
+*exemple*
+templates/*example*
+templates/*exemple*
+!.env.example
+
+# 4. Exports de données et journaux
+*.csv
+*.tsv
+*.log
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# Fichiers temporaires & Système
+# ==========================================
+
+# Fichiers de verrouillage temporaires Office
+~$*.xlsx
+~$*.docx
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
